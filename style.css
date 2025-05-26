@@ -76,6 +76,7 @@ header h1 {
 
 
 .producto-card {
+    display: center;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -101,4 +102,37 @@ a{
 }
 .social-icon{
     margin: 1%;
+}
+.imagen-hover-container {
+    position: relative;
+    display: inline-block; /* que el contenedor ajuste al contenido */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imagen-hover-container img.img-default {
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    object-fit: contain; /* o cover según necesidad */
+}
+
+.imagen-hover-container img.img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 8px;
+}
+
+.imagen-hover-container:hover img.img-hover {
+    opacity: 1;
+}
+
+.imagen-hover-container:hover img.img-default {
+    opacity: 0;
+}
+.container{
+    text-align: center;
 }
