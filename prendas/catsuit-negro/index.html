@@ -2,24 +2,26 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Catsuit Negro</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Encabezado -->
 <header>
-        <div class="container">
-            <h1>SKINS</h1>
-        </div>
+    <div class="container">
+    <h1>SKINS</h1>
+    </div>
 </header>
-<!-- Sección de producto -->
+
 <main class="producto-detalle">
     <div class="galeria">
-    <img src="imagenes/catsuit1.jpg" alt="Catsuit principal" class="img-principal"/>
+    <img src="catsuit-negro/1.jpg" class="img-principal" alt="Imagen principal del producto" />
     <div class="miniaturas">
-        <img src="imagenes/catsuit1.jpg" alt="Miniatura 1" />
-        <img src="imagenes/catsuit2.jpg" alt="Miniatura 2" />
+        <img src="catsuit-negro/2.jpg" alt="Miniatura 2" />
+        <img src="catsuit-negro/3.jpg" alt="Miniatura 3" />
+        <img src="catsuit-negro/4.jpg" alt="Miniatura 4" />
+        <img src="catsuit-negro/5.jpg" alt="Miniatura 5" />
+        <img src="catsuit-negro/6.jpg" alt="Miniatura 6" />
     </div>
     </div>
 
@@ -29,8 +31,8 @@
 
     <div class="colores">
         <span>Color:</span>
-        <button class="color" style="background: black;"></button>
-        <button class="color" style="background: gray;"></button>
+        <button class="color negro" title="Negro"></button>
+        <button class="color gris" title="Gris"></button>
     </div>
 
     <div class="talles">
@@ -44,8 +46,26 @@
         Catsuit de lycra ultra ajustado al cuerpo. Disponible en varios colores y talles.
     </p>
 
-<a href="https://wa.me/5493825538550?text=Hola!%20Estoy%20interesada%20en%20el%20Catsuite%20Negro " class="btn-whatsapp" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+    <a href="https://wa.me/5493825538550?text=Hola!%20Estoy%20interesada%20en%20el%20Catsuit%20Negro"
+        class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        Consultar por WhatsApp
+    </a>
     </div>
 </main>
+
+<!-- Modal de imagen ampliada -->
+<div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+</div>
+<!-- Modal de imagen ampliada -->
+<div id="modal" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="modal-img">
+<button class="nav prev">&#10094;</button>
+<button class="nav next">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
