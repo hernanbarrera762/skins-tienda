@@ -76,7 +76,6 @@ header h1 {
 
 
 .producto-card {
-    display: center;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -84,6 +83,12 @@ header h1 {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.producto-card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -121,9 +126,11 @@ a{
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-    border-radius: 8px;
 }
 
 .imagen-hover-container:hover img.img-hover {
@@ -135,4 +142,7 @@ a{
 }
 .container{
     text-align: center;
+}
+#productos {
+    padding-bottom: 40px;
 }
