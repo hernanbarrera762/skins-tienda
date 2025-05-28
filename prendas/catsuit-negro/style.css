@@ -168,17 +168,17 @@ cursor: pointer;
 /* Responsive */
 @media screen and (max-width: 768px) {
 .producto-detalle {
-    flex-direction: column;
-    padding: 1rem;
+flex-direction: column;
+padding: 1rem;
 }
 
 .info-producto,
 .galeria {
-    max-width: 100%;
+max-width: 100%;
 }
 
 .miniaturas {
-    justify-content: center;
+justify-content: center;
 }
 }
 /* Botones de navegación dentro del modal */
@@ -220,6 +220,6 @@ opacity: 0;
 }
 
 .descripcion{
-    font-size: 130%;
-    line-height: 180%;
+font-size: 130%;
+line-height: 180%;
 }
