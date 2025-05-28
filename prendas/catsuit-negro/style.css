@@ -4,6 +4,15 @@ margin: 0;
 font-family: sans-serif;
 background-color: #f7f7f7;
 }
+.logo-link {
+text-decoration: none;
+color: inherit;
+}
+
+.logo-link h1 {
+margin: 0;
+cursor: pointer;
+}
 
 /* Header */
 header {
@@ -208,4 +217,9 @@ cursor: zoom-in;
 
 .img-principal.fade-out {
 opacity: 0;
+}
+
+.descripcion{
+    font-size: 130%;
+    line-height: 180%;
 }
