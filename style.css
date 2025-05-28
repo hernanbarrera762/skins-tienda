@@ -105,7 +105,7 @@ a{
 }
 .imagen-hover-container {
     position: relative;
-    display: inline-block; /* que el contenedor ajuste al contenido */
+    display: inline-block; /* que el contenedor se ajuste al contenido */
     overflow: hidden;
     border-radius: 8px;
 }
