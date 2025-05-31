@@ -192,8 +192,14 @@ background: transparent;
 border: none;
 cursor: pointer;
 padding: 1rem;
-user-select: none;
 }
+.modal.nav {
+-webkit-user-select: none; /* Safari y navegadores WebKit antiguos */
+-moz-user-select: none;    /* Firefox antiguos */
+-ms-user-select: none;     /* IE/Edge antiguos */
+user-select: none;         /* Estándar */
+}
+
 
 .modal .prev {
 left: 20px;
