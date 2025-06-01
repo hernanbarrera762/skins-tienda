@@ -229,3 +229,16 @@ opacity: 0;
 font-size: 130%;
 line-height: 180%;
 }
+.disponibilidad {
+margin-top: 5px;
+font-weight: bold;
+font-size: 1em;
+}
+
+.disponibilidad.disponible {
+color: #28a745; /* verde */
+}
+
+.disponibilidad.sin-stock {
+color: #dc3545; /* rojo */
+}
