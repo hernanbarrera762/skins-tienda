@@ -194,7 +194,7 @@ cursor: pointer;
 padding: 1rem;
 }
 
-.modal.nav {
+.modal .nav {
 -webkit-user-select: none; 
 -moz-user-select: none;
 -ms-user-select: none;
