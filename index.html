@@ -159,5 +159,55 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBeLTWX22YUJfoni-Iv8Xp4vwAydjkNaUA",
+    authDomain: "skins-tienda.firebaseapp.com",
+    projectId: "skins-tienda",
+    storageBucket: "skins-tienda.appspot.com",
+    messagingSenderId: "861375159999",
+    appId: "1:861375159999:web:e2c16d31891b145904700a",
+    measurementId: "G-CG02FHXKR9"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const contenedor = document.querySelector('.galeria-productos');
+
+async function obtenerProductos() {
+    const querySnapshot = await getDocs(collection(db, "productos"));
+    querySnapshot.forEach((doc) => {
+    const producto = doc.data();
+
+      // Creamos HTML del producto
+    const card = document.createElement("div");
+    card.classList.add("producto-card");
+
+    card.innerHTML = `
+        <a href="${producto.link}">
+        <div class="imagen-hover-container">
+            <img src="${producto.img1}" alt="${producto.nombre}" class="img-default">
+            <img src="${producto.img2}" alt="${producto.nombre} alternativo" class="img-hover">
+        </div>
+        <h3>${producto.nombre}</h3>
+        <p class="precio">$${producto.precio} ARS</p>
+        <p class="disponibilidad ${producto.stock ? 'en-stock' : 'sin-stock'}">
+            ${producto.stock ? 'Disponible' : 'Sin stock'}
+        </p>
+        </a>
+    `;
+
+    contenedor.appendChild(card);
+    });
+}
+
+obtenerProductos();
+</script>
+
+
 </body>
 </html>
